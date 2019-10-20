@@ -1,0 +1,447 @@
+@import "vars";
+@import "base";
+@import "atomic";
+@import "colors";
+@import "blocks/buttons";
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.components {
+  margin: 0;
+  padding-top: 41px;
+}
+
+.components-title {
+  font-family: $font-roboto ;
+  font-style: $font-roboto-style;
+  font-size: $font-h2-size;
+  line-height: $font-h2-line;
+  color: $h2-color;
+  font-weight: 300;
+  text-transform: capitalize;
+  margin: 0;
+  padding-bottom: 27px;
+}
+
+.title-item {
+  font-family: $font-roboto;
+  font-style: $font-roboto-style;
+  font-size: $font-h3-size;
+  line-height: $font-h3-line;
+  font-weight: 300;
+  color: $h3-color;
+  text-transform: capitalize;
+  margin: 0;
+  padding-bottom: 9px;
+}
+
+.title-text {
+  font-family: $font-roboto;
+  font-style: $font-roboto-style;
+  font-size: $font-title_text-size;
+  line-height: $font-title_text-line;
+  color: $title_text-color;
+  margin: 0;
+  padding-bottom: 27px;
+}
+
+.button-container {
+  margin: 0;
+  padding-left: 202px;
+  padding-bottom: 54px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.link-container {
+  margin: 0;
+  padding-left: 230px;
+  //padding-bottom: 54px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  font-family: $font-roboto;
+  font-size: 12px;
+  font-style: $font-roboto-style;
+  line-height: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.inputs-container {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  min-width: 1200px;
+  //flex-wrap: wrap;
+}
+
+.inputs-container--left {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 60px;
+}
+
+.input {
+  display: flex;
+  align-items: flex-end;
+  align-self: flex-end;
+  //width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  //color: #999999;
+  border: none;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.input:required {
+  padding-bottom: 4px;
+  border-bottom: 1px solid #999999;
+}
+
+.input:read-only {
+  padding-bottom: 4px;
+  border-bottom: 1px solid #999999;
+}
+
+.input:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.input::placeholder {
+  font-family: $font-roboto;
+  font-style: $font-roboto-style;
+  font-size: $paragraph-size;
+  line-height: $paragraph-line;
+  color: $text-color-default;
+}
+
+.text-color--black::placeholder {
+  color: $text-color-black;
+}
+
+.error--icon {
+  background: url("../img/error-icon.png") no-repeat right;
+}
+
+.success--icon {
+  background: url("../img/success-icon.png") no-repeat right;
+}
+
+
+.label {
+  font-family: $font-roboto;
+  font-style: $font-roboto-style;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.material--icon {
+  background: url("../img/material--icon.png") no-repeat center;
+  align-self: flex-end;
+}
+
+.awesome--icon {
+  background: url("../img/awesome--icon.png") no-repeat center;
+  align-self: flex-end;
+}
+
+.container-attribute {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.checkbox-container {
+  display: flex;
+  max-width: 165px;
+  flex-wrap: wrap;
+  font-weight: 300;
+  margin: 0;
+}
+
+.unchecked {
+  opacity: 0;
+  position: absolute;
+}
+
+.unchecked + .box--blank {
+  font-family: $font-roboto;
+  font-style: $font-roboto-style;
+  font-size: $paragraph-size;
+  line-height: 20px;
+  color: #AAAAAA;
+  position: relative;
+  padding-left: 33px;
+  text-transform: capitalize;
+}
+
+.unchecked + .box--blank:before {
+  content: "";
+  position: absolute;
+  //display: flex;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.54);
+  left: 0;
+}
+
+.checked {
+  opacity: 0;
+  position: absolute;
+}
+
+.checked + .box--checked {
+  font-family: $font-roboto;
+  font-style: $font-roboto-style;
+  font-size: $paragraph-size;
+  line-height: 20px;
+  color: #AAAAAA;
+  position: relative;
+  padding-left: 33px;
+  text-transform: capitalize;
+}
+
+.checked + .box--checked:before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.54);
+  left: 0;
+}
+
+.checked + .box--checked:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  border-bottom: 2px solid  #9C27B0;
+  border-left: 2px solid #9C27B0;
+  transform: rotate(-45deg);
+  left: 4px;
+  top: 5px;
+}
+
+.disabled--unchecked {
+  opacity: 0;
+  position: absolute;
+}
+
+.disabled--unchecked + .box--blank_disabled {
+  font-family: $font-roboto;
+  font-style: $font-roboto-style;
+  font-size: $paragraph-size;
+  line-height: 20px;
+  color: #AAAAAA;
+  position: relative;
+  padding-left: 33px;
+  text-transform: capitalize;
+}
+
+.disabled--unchecked + .box--blank_disabled:before {
+  content: "";
+  position: absolute;
+  //display: flex;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  left: 0;
+}
+
+.disabled--checked {
+  opacity: 0;
+  position: absolute;
+}
+
+.disabled--checked + .box--checked_disabled {
+  font-family: $font-roboto;
+  font-style: $font-roboto-style;
+  font-size: $paragraph-size;
+  line-height: 20px;
+  color: #AAAAAA;
+  position: relative;
+  padding-left: 33px;
+  text-transform: capitalize;
+}
+
+.disabled--checked + .box--checked_disabled:before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  left: 0;
+}
+
+.disabled--checked + .box--checked_disabled:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  border-bottom: 2px solid  rgba(156, 39, 176, 0.26);
+  border-left: 2px solid rgba(156, 39, 176, 0.26);
+  transform: rotate(-45deg);
+  left: 4px;
+  top: 5px;
+}
+
+.radio-button-container {
+  font-weight: 300;
+}
+
+.radio--off {
+  opacity: 0;
+  position: absolute;
+}
+
+.radio--off + .off {
+  font-family: $font-roboto;
+  font-style: $font-roboto-style;
+  font-size: $paragraph-size;
+  line-height: 19px;
+  color: #AAAAAA;
+  position: relative;
+  padding-left: 23px;
+  display: block;
+}
+
+.radio--off + .off:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.54);
+  left: 0;
+}
+
+.radio--on {
+  opacity: 0;
+  position: absolute;
+}
+
+.radio--on + .on {
+  font-family: $font-roboto;
+  font-style: $font-roboto-style;
+  font-size: $paragraph-size;
+  line-height: 19px;
+  color: #AAAAAA;
+  position: relative;
+  padding-left: 23px;
+  display: block;
+}
+
+.radio--on + .on:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #9C27B0;
+  left: 0;
+}
+
+.radio--on + .on:after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #9C27B0;
+  left: 2px;
+  top: 2px;
+}
+
+.radio--on:checked + .on:after {
+  opacity: 1;
+}
+
+.radio--off_disabled {
+  opacity: 0;
+  position: absolute;
+}
+
+.radio--off_disabled + .off--disabled {
+  font-family: $font-roboto;
+  font-style: $font-roboto-style;
+  font-size: $paragraph-size;
+  line-height: 19px;
+  color: #AAAAAA;
+  position: relative;
+  padding-left: 23px;
+  display: block;
+}
+
+.radio--off_disabled + .off--disabled:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.26);
+  left: 0;
+}
+
+.radio--on_disabled {
+  opacity: 0;
+  position: absolute;
+}
+
+.radio--on_disabled + .on--disabled {
+  font-family: $font-roboto;
+  font-style: $font-roboto-style;
+  font-size: $paragraph-size;
+  line-height: 19px;
+  color: #AAAAAA;
+  position: relative;
+  padding-left: 23px;
+  display: block;
+}
+
+.radio--on_disabled + .on--disabled:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.26);
+  left: 0;
+}
+
+.radio--on_disabled + .on--disabled:after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.26);
+  left: 2px;
+  top: 2px;
+}
+
+.radio--on_disabled:checked + .on--disabled:after {
+  opacity: 1;
+}

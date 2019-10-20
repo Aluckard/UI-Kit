@@ -1,0 +1,102 @@
+.button {
+  font-family: $font-roboto;
+  font-style: $font-roboto-style;
+  font-weight: 300;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  box-shadow: $color-primary-shadow;
+}
+
+
+button,
+button:active,
+button:focus {
+  outline: none;
+}
+
+.button--default {
+  padding: 12px 23px ;
+  font-size: $paragraph-size;
+  line-height: $paragraph-line;
+  border-radius: $border-radius;
+  margin: 0;
+}
+
+.button--round {
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-size: $paragraph-size;
+  line-height: $paragraph-line;
+  margin: 0;
+}
+
+.button--with-icon {
+  padding: 12px 28px 12px 38px;
+  border-radius: 20px;
+  font-size: $paragraph-size;
+  line-height: $paragraph-line;
+  margin: 0;
+  background-image: url("../img/with-icon.png");
+  background-repeat: no-repeat;
+  background-position: 15% center;
+}
+
+.button--blank {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: $paragraph-size;
+  line-height: $paragraph-line;
+  margin: 0;
+  background-image: url("../img/with-icon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button--simple {
+  font-family: $font-roboto;
+  font-style: $font-roboto-style;
+  font-size: $paragraph-size;
+  line-height: $paragraph-line;
+  color: #9C27B0;
+  background-color: white;
+  margin: 0;
+  box-shadow: none;
+}
+
+.button--x-small {
+  align-self: center;
+  font-size: 10px;
+  line-height: 12px;
+  padding: 5.5px 13.5px;
+  margin: 0;
+  border-radius: $border-radius;
+}
+
+.button--small {
+  align-self: center;
+  font-size: 11px;
+  line-height: 13px;
+  padding: 6.5px 19.5px;
+  margin: 0;
+  border-radius: $border-radius;
+}
+
+.button--regular {
+  align-self: center;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 13.5px 27px;
+  margin: 0;
+  border-radius: $border-radius;
+}
+
+.button--large {
+  align-self: center;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 19px 33.75px;
+  margin: 0;
+  border-radius: $border-radius;
+}

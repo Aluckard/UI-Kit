@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UI Kit</title>
+    <link rel="stylesheet" href="scss/style.css">
+
+
+</head>
+<body>
+
+<div class="container">
+    <div class="components">
+        <h2 class="components-title">Basic element</h2>
+        <h3 class="title-item">Buttons</h3>
+        <p class="title-text">Pick your style</p>
+        <div class="button-container w-680">
+            <button class="button button--default bg-color-primary">Default</button>
+            <button class="button button--round bg-color-primary">Round</button>
+            <button class="button button--with-icon bg-color-primary">With icon</button>
+            <button class="button button--blank bg-color-primary"></button>
+            <button class="button button--simple">Simple</button>
+        </div>
+        <p class="title-text">Pick your size</p>
+        <div class="button-container w-680">
+        <button class="button button--x-small bg-color-primary">X-small</button>
+        <button class="button button--small bg-color-primary">Small</button>
+        <button class="button button--regular bg-color-primary">Regular</button>
+        <button class="button button--large bg-color-primary">Large</button>
+        </div>
+        <p class="title-text">Pick your color</p>
+        <div class="button-container w-850">
+            <button class="button button--regular bg-color-default">Default</button>
+            <button class="button button--regular bg-color-primary">Primary</button>
+            <button class="button button--regular bg-color-info">Info</button>
+            <button class="button button--regular bg-color-success">Success</button>
+            <button class="button button--regular bg-color-warning">Warning</button>
+            <button class="button button--regular bg-color-danger">Danger</button>
+        </div>
+        <h3 class="title-item pb-39">Links</h3>
+        <div class="link-container w-820">
+        <a class="link text-color--default" href="#">Default</a>
+        <a class="link text-color--primary" href="#">Primary</a>
+        <a class="link text-color--info" href="#">Info</a>
+        <a class="link text-color--success" href="#">Success</a>
+        <a class="link text-color--warning" href="#">Warning</a>
+        <a class="link text-color--danger" href="#">Danger</a>
+        </div>
+        <h3 class="title-item pb-63">Inputs</h3>
+        <div class="inputs-container">
+            <input class="input w-262" type="text" placeholder="Regular" required>
+            <input class="input w-262" type="text" placeholder="With floating label" required>
+            <label class="label text-color--success" for="success">Success input
+            <input id="success" class="input w-262 pt-9 text-color--black success--icon" placeholder="Success" type="text" readonly></label>
+            <label class="label text-color--danger" for="error">Error input
+            <input id="error" class="input w-262 pt-9 text-color--black error--icon" placeholder="Error" type="text" readonly></label>
+        </div>
+        <div class="inputs-container--left w-540">
+            <label class="material--icon pt-60 w-20" for="material-icon"></label>
+            <input id="material-icon" class="input pt-60 ml-2" type="text" placeholder="With material icon" required>
+            <label class="awesome--icon w-15 pt-60 ml-auto" for="awesome--icon"></label>
+            <input id="awesome--icon" class="input pt-60 ml-2" type="text" placeholder="With Font awesome icons" required>
+        </div>
+        <div class="container-attribute">
+            <div class="checkbox-container">
+                <h3 class="title-item pb-29">Checkboxes</h3>
+                    <input class="unchecked" type="checkbox" id="unchecked">
+                    <label class="pb-11 box--blank" for="unchecked">Unchecked</label>
+                    <input class="checked" type="checkbox" id="checked">
+                    <label class="pb-11 box--checked" for="checked">Checked</label>
+                    <input class="disabled--unchecked" type="checkbox" id="disabled-unchecked">
+                    <label class="pb-11 box--blank_disabled" for="disabled-unchecked">Disabled unchecked</label>
+                    <input class="disabled--checked" type="checkbox" id="disabled-checked">
+                    <label class="pb-11 box--checked_disabled" for="disabled-checked">Disabled checked</label>
+            </div>
+            <div class="radio-button-container">
+                <h3 class="title-item pb-31">Radio buttons</h3>
+                <input type="radio" class="radio--off" id="radio--off" name="radio">
+                <label class="off pb-12" for="radio--off">Radio is off</label>
+                <input type="radio" class="radio--on" id="radio--on" name="radio">
+                <label class="on pb-12" for="radio--on">Radio is on</label>
+                <input type="radio" class="radio--off_disabled" id="radio--off_disabled" name="radio">
+                <label class="off--disabled pb-12" for="radio--off_disabled">Disabled Radio is off</label>
+                <input type="radio" class="radio--on_disabled" id="radio--on_disabled" name="radio">
+                <label class="on--disabled pb-12 " for="radio--on_disabled">Radio is on</label>
+            </div>
+            <div class="toggle-container">
+                <h3 class="title-item">Toggle buttons</h3>
+            </div>
+            <div class="slider-container">
+                <h3 class="title-item">Sliders</h3>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
